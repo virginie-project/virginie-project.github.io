@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>OpenLayers Demo</title>
+      <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./mui.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+   crossorigin=""/>
+   <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" type="text/css" href="nouislider.min.css">
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+   integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+   crossorigin=""></script>
+   <script src="./data.js"></script>
+   <script src="./papaparse.min.js"></script>
+    <script src="./nouislider.min.js"></script>
+    <script src="./wNumb.js"></script>
+    <script src="./mui.min.js"></script>
+   
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+  <body >
+
+<!--  -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3" id="left">
+      <div>
+        <br/><br/><br/>
+        <button onclick="displayAll()" class="mui-btn mui-btn--raised">Tout afficher</button>
+        <br />
+        <div class="mui-divider"></div>
+        <br/>
+      <p>Filtrer par année : <span id="slider-value"></span></p>
+      <div id="slider"></div>
+      <br/>
+      <div class="mui-divider"></div>
+      <br/>
+      <p>Chercher par nom</p>
+
+      <div class="mui-textfield mui-textfield--float-label">
+          <input  type="text"id="name_search">          
+        <!-- <input type="text" id="name_search"> -->
+        <label>Nom</label>
+      </div>
+      <button onclick="search()" class="mui-btn mui-btn--raised">Chercher</button>
+      </div>
+      <br/>
+
+     <div id="searchResult" id="left-scroll">
+       
+     </div>
+    </div>
+    <div class="col-9" id="right">
+          <div id="map"></div>  
+    </div>
+  </div>
+
+
+
+<script src="./app.js"></script>
+  </body>
+</html>
