@@ -54,7 +54,8 @@ button {
  }
 
 #map {
-	height: 800px;
+  height: 800px;
+  margin-top: 64px;
 }
 
 /**
