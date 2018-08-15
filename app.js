@@ -11,7 +11,7 @@ function search() {
   var dudeToShow = [];
 
   for (dude in data) {
-    if (data[dude].name == toSearch) {
+    if (data[dude].name.toLowerCase() == toSearch.toLowerCase()) {
         var mar = createMarker(data[dude])
         maMap.set(data[dude].id, mar)
         dudeToShow.push(data[dude])
@@ -73,7 +73,7 @@ var m = L.marker([createMe.lat, createMe.long], {icon: myIcon}).addTo(map)
 
 var map = L.map('map').setView([48.864716, 2.349014], 13);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
@@ -89,8 +89,8 @@ function initSlider() {
     start: [ 1700 ],
     step: 1,
     range: {
-      'min': [ 1661 ],
-      'max': [ 1715 ]
+      'min': [ 1643 ],
+      'max': [ 1755 ]
     },
     format: wNumb({
       decimals: 0
@@ -107,9 +107,17 @@ function initSlider() {
   
     var x;
     for (x in data) {
-      if (data[x].live_year == slider.noUiSlider.get())
-      {
-       createMarker(data[x])
+
+      if (data[x].live_year.toString().includes("-")){
+        var yearBetween = data[x].live_year.toString().split('-');
+        if (yearBetween[0] <= slider.noUiSlider.get() && yearBetween[1] >= slider.noUiSlider.get()) {
+          createMarker(data[x])
+        }
+      }else {
+        if (data[x].live_year == slider.noUiSlider.get())
+        {
+         createMarker(data[x])
+        }
       }
     }
   });
