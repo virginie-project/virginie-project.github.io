@@ -68,15 +68,15 @@ var popup = L.popup({maxHeight: 300})
     .setLatLng([createMe.lat, createMe.long])
     .setContent("<h6>" + createMe.name + " " + createMe.firstname  +"</h6>"
     + "<p>" + (createMe.live_death ? createMe.live_death : "") +"</p>"
-    +"<p>"+ createMe.family_link +"</p>"  
-    +"<p>"+  createMe.title +"</p>"  
-    +"<p>"+  createMe.living_places +"</p>"  
-    +"<p>"+  createMe.parisian_stuff +"</p>"  
-    +"<p>"+  createMe.versaille_stuff +"</p>"  
-    +"<p>"+ createMe.other_stuff +"</p>"  
-    +"<p>"+ createMe.notes +"</p>"  
-    +"<p>"+ createMe.known_collaboration +"</p>"  
-    +"<p>"+ createMe.documents +"</p>"  )
+    +"<p>"+ (createMe.family_link ?createMe.family_link : "")+"</p>"  
+    +"<p>"+  (createMe.title? createMe.title : "")+"</p>"  
+    +"<p>"+  (createMe.living_places?createMe.living_places : "")+"</p>"  
+    +"<p>"+  (createMe.parisian_stuff?createMe.parisian_stuff : "")+"</p>"  
+    +"<p>"+  (createMe.versaille_stuff?createMe.versaille_stuff: "") +"</p>"  
+    +"<p>"+ (createMe.other_stuff?createMe.other_stuff : "")+"</p>"  
+    +"<p>"+ (createMe.notes?createMe.notes: "") +"</p>"  
+    +"<p>"+ (createMe.known_collaboration?createMe.known_collaboration : "")+"</p>"  
+    +"<p>"+ (createMe.documents?createMe.documents : "")+"</p>"  )
     ;
 
   m.bindPopup(popup);

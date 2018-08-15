@@ -6,6 +6,7 @@ body {
   margin: 0;
   overflow: hidden;
   height:100%;
+  
 }
 
 html,
@@ -25,7 +26,8 @@ button {
     bottom: 0;
     left: 0;
     overflow-y: scroll; 
-    background-image:url("bg.png");
+    background-image:url("./bg.png");
+    background-repeat:no-repeat;
   }
   
   #right {
@@ -34,6 +36,8 @@ button {
     bottom: 0;
     right: 0;
     overflow-y: scroll;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -53,7 +57,10 @@ li {
 
 #right {
   height:100%;
-  margin-top: 64px;
+}
+
+#right-bis {
+  margin-left: 32px;
 }
 
 #slider { 
