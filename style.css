@@ -44,9 +44,17 @@ button {
 #left {
   /*height:100%;*/
 }
+li {
+  font-size: 14px;
+  margin-left: 10px;
+  list-style-type: circle;
+  color: black; /* text color */
+
+}
 
 #right {
   height:100%;
+  margin-top: 64px;
 }
 
 #slider { 
@@ -55,7 +63,6 @@ button {
 
 #map {
   height: 800px;
-  margin-top: 64px;
 }
 
 /**

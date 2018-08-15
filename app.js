@@ -125,3 +125,5 @@ function initSlider() {
 initSlider()
 document.getElementById("slider-value").innerHTML = "Tout"
 displayAll()
+
+
