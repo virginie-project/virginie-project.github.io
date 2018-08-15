@@ -25,6 +25,7 @@ button {
     bottom: 0;
     left: 0;
     overflow-y: scroll; 
+    background-image:url("bg.png");
   }
   
   #right {
@@ -41,9 +42,7 @@ button {
   overflow-y: scroll; 
 }
 
-#left {
-  /*height:100%;*/
-}
+
 li {
   font-size: 14px;
   margin-left: 10px;
