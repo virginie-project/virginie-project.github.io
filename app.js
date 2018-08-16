@@ -62,7 +62,7 @@ function clearAll() {
 
 function createMarker(createMe) {
   var myIcon = L.icon({
-    iconUrl: 'marker.png'
+    iconUrl: 'marker.png', popupAnchor: [8, 0]
 });
 var m = L.marker([createMe.lat, createMe.long], {icon: myIcon}).addTo(map) 
 
