@@ -28,6 +28,7 @@ button {
     overflow-y: scroll; 
     background-image:url("./bg.png");
     background-repeat:no-repeat;
+    background-size:cover;
   }
   
   #right {
