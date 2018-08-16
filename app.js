@@ -11,7 +11,9 @@ function search() {
   var dudeToShow = [];
 
   for (dude in data) {
-    if (data[dude].name.toLowerCase() == toSearch.toLowerCase()) {
+    var fullname = data[dude].name.toLowerCase() + " " + data[dude].firstname.toLowerCase()
+    
+    if (fullname.includes(toSearch.toLowerCase())) {
         var mar = createMarker(data[dude])
         maMap.set(data[dude].id, mar)
         dudeToShow.push(data[dude])
@@ -25,11 +27,11 @@ function search() {
     var name = dudeToShow[showMe].name;
     var firstname = dudeToShow[showMe].firstname;
     var pop = "\'" + dudeToShow[showMe].id + "\'" ;
-     append += "<button onClick=\"addrClick("+ pop +")\" type=\"button\" class=\"list-group-item list-group-item-action\">Dapibus ac facilisis in</button>"
+     append += "<button onClick=\"addrClick("+ pop +")\" type=\"button\" class=\"list-group-item list-group-item-action\">"+ name + " "+ firstname + " (" + dudeToShow[showMe].live_year + ")" + "</button>"
   }
   var res = groupBegin + append + groupEnd
 if (dudeToShow.length > 0) {
-  var myEl = $("<div class=\"card\" style=\"width: 18rem;\"><div class=\"card-body\"><h5 class=\"card-title\">" + name + " "+ firstname+ "</h5>" + res  + "</div></div><br />");
+  var myEl = $("<div class=\"card\" style=\"width: 20rem;\"><div class=\"card-body\"><h5 class=\"card-title\">Résultats</h5>" + res  + "</div></div><br />");
   $('#searchResult').append(myEl);
 }else {
   var myEl = $("<p>Pas de résultats</p><br />");
