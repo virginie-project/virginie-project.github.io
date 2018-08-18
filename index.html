@@ -1,153 +1,197 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <title>OpenLayers Demo</title>
-      <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="./mui.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
-   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
-   crossorigin=""/>
-   <link rel="stylesheet" type="text/css" href="style.css">
 
-      <link rel="stylesheet" type="text/css" href="nouislider.min.css">
-          <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<head>
+  <title>OpenLayers Demo</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./mui.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin="" />
+  <link rel="stylesheet" type="text/css" href="style.css">
 
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-  
-
-    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
-   integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
-   crossorigin=""></script>
-   <script src="./data.js"></script>
-   <script src="./papaparse.min.js"></script>
-    <script src="./nouislider.min.js"></script>
-    <script src="./wNumb.js"></script>
-    <script src="./mui.min.js"></script>
-  
+  <link rel="stylesheet" type="text/css" href="nouislider.min.css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </head>
-  <body >
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 
-<!--  -->
-<div class="container-fluid">  
-  <div class="row">
-    <div class="col-3" id="left">
-      <div>
+
+  <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+    crossorigin=""></script>
+  <script src="./data.js"></script>
+  <script src="./papaparse.min.js"></script>
+  <script src="./nouislider.min.js"></script>
+  <script src="./wNumb.js"></script>
+  <script src="./mui.min.js"></script>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- UGLIEST CODE I EVER WROTE -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3" id="left">
+        <div>
           <ul class="mui-tabs__bar">
-              <li class="mui--is-active"><a data-mui-toggle="tab" data-mui-controls="pane-default-1">Carte</a></li>
-              <li><a data-mui-toggle="tab" data-mui-controls="pane-default-2">À propos</a></li>
-            </ul>
-            
-        <br/>
-        <br />
-        <div class="mui-divider"></div>
-        <br/>
-      <p><b>Filtrer par année :</b> <span id="slider-value"></span></p>
-      <div id="slider"></div>
-      <br/>
-      <button onclick="displayAll()" class="mui-btn mui-btn--raised" data-micromodal-trigger="modal-1">Tout afficher</button>
-      <br/><br/>
-      <div class="mui-divider"></div>
-      <br/>
-      <p><b>Chercher par nom</b></p>
+            <li class="mui--is-active"><a data-mui-toggle="tab" data-mui-controls="pane-default-1">Carte</a></li>
+            <li><a data-mui-toggle="tab" data-mui-controls="pane-default-2">À propos</a></li>
+          </ul>
 
-      <div class="mui-textfield mui-textfield--float-label">
-          <input  type="text"id="name_search">          
-        <!-- <input type="text" id="name_search"> -->
-        <label>Nom</label>
-      </div>
-      <button onclick="search()" class="mui-btn mui-btn--raised">Chercher</button>
-      </div>
-    <br/>
+          <br/>
+          <br />
+          <div class="mui-divider"></div>
+          <br/>
+          <p><b>Filtrer par année :</b> <span id="slider-value"></span></p>
+          <div id="slider"></div>
+          <br/>
+          <button onclick="displayAll()" class="mui-btn mui-btn--raised" data-micromodal-trigger="modal-1">Tout afficher</button>
+          <br/><br/>
+          <div class="mui-divider"></div>
+          <br/>
+          <p><b>Chercher par nom</b></p>
 
-     <div id="searchResult" id="left-scroll">
-       
-     </div>
-    </div>
-    <div class="mui-tabs__pane mui--is-active" id="pane-default-1">
-      <div class="col-9" id="right">
-        <div id="map"></div> 
+          <div class="mui-textfield mui-textfield--float-label">
+            <input type="text" id="name_search">
+            <!-- <input type="text" id="name_search"> -->
+            <label>Nom</label>
+          </div>
+          <button onclick="search()" class="mui-btn mui-btn--raised">Chercher</button>
+        </div>
+        <br/>
+
+        <div id="searchResult" id="left-scroll">
+
+        </div>
       </div>
-    </div>
-    <div class="mui-tabs__pane" id="pane-default-2">
+      <div class="mui-tabs__pane mui--is-active" id="pane-default-1">
+        <div class="col-9" id="right">
+          <div id="map"></div>
+        </div>
+      </div>
+      <div class="mui-tabs__pane" id="pane-default-2">
         <div class="col-9" id="right">
           <div id="right-bis">
-        <h5>A propos du projet :</h5>
-        <p>
-            Ce site a été établi dans le cadre de la rédaction d’un mémoire de Second Cycle en recherche appliquée en histoire de l’art à l’Ecole du Louvre, intitulé « Être sculpteur à Paris sous le règne de Louis XIV : typologies de métiers, ateliers et réseaux », réalisé sous la direction de M. Olivier Bonfait, professeur d’histoire de l’art moderne à l’Université de Bourgogne et directeur d’Etudes à l’Ecole du Louvre et Mme Geneviève Bresc-Bautier, conservatrice honoraire du Patrimoine. La cartographie interactive qui lui est associée a pour but premier de permettre la localisation des ateliers et les habitations des sculpteurs actifs à Paris sous le règne de Louis XIV, indifféremment qu’ils soient membres de l’Académie Royale de Peinture ou de Sculpture ou de la communauté des peintres et sculpteurs, aussi connue sous le vocable d’Académie de Saint-Luc.
-        </p>
-        <p>
-                Toutes les recherches qui ont conduits à l’établissement de ce site ont été effectuées par <b>Virginie Guffroy</b>, alors étudiante en Seconde Année de Second Cycle à l’Ecole du Louvre.
-        </p>
-        <p>
-                L’entière réalisation du site et de la carte est due à <b>Bastien Billey</b>, développeur.
-        </p>
-        <p>
-                Ce projet n’est soutenu par aucune subvention universitaire ; Il est donc uniquement le fruit du bon-vouloir et de la volonté de ses deux auteurs.
-        </p>
-        <p>
-                Les notices de chaque artiste concernent les sculpteurs parisiens actifs entre 1661 et 1715 et sont établies à partir du Fichier Laborde de la Bibliothèque Nationale, des <i>des Bâtiments du Roi sous le règne de Louis XIV</i> publiés par Jules Guiffrey, du <i>Dictionnaire des sculpteurs de l’Ecole Française sous le règne de Louis XIV</i> de Stanislas Lami, des <i>Documents du Minutier Central concernant l’histoire de l’art 1700-1750</i>, Tome I et II, réunis par Murielle Rambaut et des quatres volumes écrits par Françoise de la Moureyre et François Souchal, <i>French Sculptors of the 17th and 18th centuries : the reign of Louis XIV</i>. Ces fiches fournissent successivement, lorsque les données sont disponibles, le nom et prénom de l’artiste, ses dates de vie et de mort, ses dates d’activité, la ville ou le pays d’où il est originaire, ses liens familiaux, son titre, son ou ses lieux d’habitations, ses œuvres parisiennes et versaillaises, les œuvres extérieures à ces deux localisations, des notes concernant divers aspects de sa vie (parfois anecdotiques), ses collaborations connues, son inventaire après décès (et/ou celui de sa compagne) et enfin la mention des documents à partir desquels la fiche a été établie.
-        </p>
-        <p>
-                La carte ancienne de Paris utilisée ici est celle de Nicolas de Fer (1647-1720), datant de 1705, « Huitième plan de Paris divisé en ses vingt quartiers », libre de droits.
-        </p>
-        <p><u>Liste des abbréviations utilisées dans les notices :</u></p>
-        
+            <h5>A propos du projet :</h5>
+            <p>
+              Ce site a été établi dans le cadre de la rédaction d’un mémoire de Second Cycle en recherche appliquée en histoire de l’art
+              à l’Ecole du Louvre, intitulé « Être sculpteur à Paris sous le règne de Louis XIV : typologies de métiers,
+              ateliers et réseaux », réalisé sous la direction de M. Olivier Bonfait, professeur d’histoire de l’art moderne
+              à l’Université de Bourgogne et directeur d’Etudes à l’Ecole du Louvre et Mme Geneviève Bresc-Bautier, conservatrice
+              honoraire du Patrimoine. La cartographie interactive qui lui est associée a pour but premier de permettre la
+              localisation des ateliers et les habitations des sculpteurs actifs à Paris sous le règne de Louis XIV, indifféremment
+              qu’ils soient membres de l’Académie Royale de Peinture ou de Sculpture ou de la communauté des peintres et
+              sculpteurs, aussi connue sous le vocable d’Académie de Saint-Luc.
+            </p>
+            <p>
+              Toutes les recherches qui ont conduits à l’établissement de ce site ont été effectuées par <b>Virginie Guffroy</b>,
+              alors étudiante en Seconde Année de Second Cycle à l’Ecole du Louvre.
+            </p>
+            <p>
+              L’entière réalisation du site et de la carte est due à <b>Bastien Billey</b>, développeur.
+            </p>
+            <p>
+              Ce projet n’est soutenu par aucune subvention universitaire ; Il est donc uniquement le fruit du bon-vouloir et de la volonté
+              de ses deux auteurs.
+            </p>
+            <p>
+              Les notices de chaque artiste concernent les sculpteurs parisiens actifs entre 1661 et 1715 et sont établies à partir du
+              Fichier Laborde de la Bibliothèque Nationale, des <i>des Bâtiments du Roi sous le règne de Louis
+                XIV</i> publiés par Jules Guiffrey, du <i>Dictionnaire des sculpteurs de l’Ecole Française sous le règne
+                de Louis XIV</i> de Stanislas Lami, des <i>Documents du Minutier Central concernant l’histoire de l’art 1700-1750</i>,
+              Tome I et II, réunis par Murielle Rambaut et des quatres volumes écrits par Françoise de la Moureyre et François
+              Souchal, <i>French Sculptors of the 17th and 18th centuries : the reign of Louis XIV</i>. Ces fiches fournissent
+              successivement, lorsque les données sont disponibles, le nom et prénom de l’artiste, ses dates de vie et de
+              mort, ses dates d’activité, la ville ou le pays d’où il est originaire, ses liens familiaux, son titre, son
+              ou ses lieux d’habitations, ses œuvres parisiennes et versaillaises, les œuvres extérieures à ces deux localisations,
+              des notes concernant divers aspects de sa vie (parfois anecdotiques), ses collaborations connues, son inventaire
+              après décès (et/ou celui de sa compagne) et enfin la mention des documents à partir desquels la fiche a été
+              établie.
+            </p>
+            <p>
+              La carte ancienne de Paris utilisée ici est celle de Nicolas de Fer (1647-1720), datant de 1705, « Huitième plan de Paris
+              divisé en ses vingt quartiers », libre de droits.
+            </p>
+            <p><u>Liste des abbréviations utilisées dans les notices :</u></p>
+
             <ul>
-               <li>• (SD) : sans date. Il s’agit alors généralement d’une œuvre non datée.</li>
-        
-               <li>• Lami : Lami, Stanislas, <i>Dictionnaire des sculpteurs de l’École française sous le règne de Louis XIV,</i> Paris, H. Champion, 1906.</li>
-                
-                <li>• CBR : Guiffrey Jules, <i>Comptes des bâtiments du roi sous le règne de Louis XIV</i>, Tomes 1 à 5, Paris, Imprimerie nationale, 1886.</li>
-                
-                 <li>• MC : Minutier Central des notaires de Paris, suivi de la référence de la liasse.</li>
-                
-                <li>• FL : Fichier Laborde de la Bibliothèque Nationale, suivi du numéro de la fiche.</li>
-                
-                <li>• ENSBA : Ecole Nationale Supérieure des Beaux-Arts.</li>
-                
-                 <li>• Souchal : Souchal François, Dumuis Henriette et La Moureyre Françoise de, <i>French Sculptors of the 17th and 18th centuries: the reign of Louis XIV</i>, Tomes 1 à 4, Oxford, Cassirer, 1977-1993. Cette mention est suivie du numéro du tome.</li>
-                
-                <li>• l. : livre(s)</li>
-                
-                <li>• l.t : livre tournois</li>
-                
-                 <li>• s. : sol(s)</li>
-                
-                 <li>• p. : page(s)  </li>
+              <li>• (SD) : sans date. Il s’agit alors généralement d’une œuvre non datée.</li>
+
+              <li>• Lami : Lami, Stanislas, <i>Dictionnaire des sculpteurs de l’École française sous le règne de Louis XIV,</i>
+                Paris, H. Champion, 1906.</li>
+
+              <li>• CBR : Guiffrey Jules, <i>Comptes des bâtiments du roi sous le règne de Louis XIV</i>, Tomes 1 à 5, Paris,
+                Imprimerie nationale, 1886.</li>
+
+              <li>• MC : Minutier Central des notaires de Paris, suivi de la référence de la liasse.</li>
+
+              <li>• FL : Fichier Laborde de la Bibliothèque Nationale, suivi du numéro de la fiche.</li>
+
+              <li>• ENSBA : Ecole Nationale Supérieure des Beaux-Arts.</li>
+
+              <li>• Souchal : Souchal François, Dumuis Henriette et La Moureyre Françoise de, <i>French Sculptors of the
+                  17th and 18th centuries: the reign of Louis XIV</i>, Tomes 1 à 4, Oxford, Cassirer, 1977-1993. Cette mention
+                est suivie du numéro du tome.</li>
+
+              <li>• l. : livre(s)</li>
+
+              <li>• l.t : livre tournois</li>
+
+              <li>• s. : sol(s)</li>
+
+              <li>• p. : page(s) </li>
             </ul>
-        
+
             <h5>De quoi s’agit-il ?</h5>
             <p>
-                    L’étude de la sculpture au temps de Louis XIV fait l’objet, par rapport aux règnes antérieurs, d’un intérêt prononcé de la part des chercheurs. Les études se sont néanmoins principalement bornées aux sculpteurs de l’Académie Royale de Peinture et de Sculpture et au pôle de production Versaillais. Le contre-pied est pris ici. On s’attache à traiter en premier lieu le pôle parisien et les sculpteurs qui y sont actifs, qu’ils soient membres de l’Académie Royale ou de la Maitrise. Ainsi nous portons la même attention aux grands artistes du siècle qu’à la masse des petits sculpteurs parfois inconnus ou presque, mais pourtant bien présents sur la scène artistique parisienne. Les concernant, les sources textuelles font souvent défaut. Pour cette raison, vous trouverez des fiches parfois très incomplètes mais ayant au moins le mérite de recenser et prendre en compte ces « petits » sculpteurs.<br/><br/>
-                    Concernant les adresses des artistes, il faut rappeler que la numérotation des rues à Paris n’était pas en vigueur sous le règne de Louis XIV ; ainsi les documents fournissent uniquement le nom de la rue permettant, dans l’établissement de cette carte, une légère marge d’erreur quant à la localisation exacte des ateliers et des logements et de tout lieu utile à notre compréhension.<br/><br/>
-                    Cette cartographie a pour but de localiser les ateliers et les habitations des artistes dans la ville mais n’est pas une fin en soi. Elle est, en effet, un outil mis à disposition des chercheurs et des curieux pour aider à la compréhension des implantations des artistes dans la ville et à la mise en lumière les quartiers artistiques de l’époque.
+              L’étude de la sculpture au temps de Louis XIV fait l’objet, par rapport aux règnes antérieurs, d’un intérêt prononcé de la
+              part des chercheurs. Les études se sont néanmoins principalement bornées aux sculpteurs de l’Académie Royale
+              de Peinture et de Sculpture et au pôle de production Versaillais. Le contre-pied est pris ici. On s’attache
+              à traiter en premier lieu le pôle parisien et les sculpteurs qui y sont actifs, qu’ils soient membres de l’Académie
+              Royale ou de la Maitrise. Ainsi nous portons la même attention aux grands artistes du siècle qu’à la masse
+              des petits sculpteurs parfois inconnus ou presque, mais pourtant bien présents sur la scène artistique parisienne.
+              Les concernant, les sources textuelles font souvent défaut. Pour cette raison, vous trouverez des fiches parfois
+              très incomplètes mais ayant au moins le mérite de recenser et prendre en compte ces « petits » sculpteurs.<br/><br/>              Concernant
+              les adresses des artistes, il faut rappeler que la numérotation des rues à Paris n’était pas en vigueur sous
+              le règne de Louis XIV ; ainsi les documents fournissent uniquement le nom de la rue permettant, dans l’établissement
+              de cette carte, une légère marge d’erreur quant à la localisation exacte des ateliers et des logements et de
+              tout lieu utile à notre compréhension.<br/><br/> Cette cartographie a pour but de localiser les ateliers et
+              les habitations des artistes dans la ville mais n’est pas une fin en soi. Elle est, en effet, un outil mis
+              à disposition des chercheurs et des curieux pour aider à la compréhension des implantations des artistes dans
+              la ville et à la mise en lumière les quartiers artistiques de l’époque.
             </p>
-        
+
             <h5>Contact</h5>
-            <p>Si vous repérez des coquilles dans les fiches des sculpteurs ou que vous souhaitez contribuer à l’établissement de cette carte interactive, n’hésitez pas à nous contacter. </p>
-        
+            <p>Si vous repérez des coquilles dans les fiches des sculpteurs ou que vous souhaitez contribuer à l’établissement
+              de cette carte interactive, n’hésitez pas à nous contacter. </p>
+
           </div>
         </div>
 
-    </div></div>
+      </div>
+    </div>
 
-            
-    
+
+
   </div>
 
   <script src="./app.js"></script>
 
-  </body>
+</body>
+
 </html>
